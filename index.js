@@ -1,14 +1,14 @@
 const express = require('express');
-//const LimitingMiddleware = require('limiting-middleware');
-const { randomJoke, randomTen, jokeByType } = require('./handler');
+//const { randomJoke, randomTen, jokeByType } = require('./handler');
 
 const app = express();
 
-//app.use(new LimitingMiddleware().limitByIp());
-
 app.use(express.static(__dirname + '/public'));
 
-app.use(require('./routes/legacy_routes'));
+app.use(require('./routes/routes'));
+
+// LEGACY ROUTES (Must be activated below ↓ and deactivate the command above ↑)
+// app.use(require('./routes/legacy_routes'));
 
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
