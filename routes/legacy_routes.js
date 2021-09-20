@@ -1,5 +1,10 @@
 var express = require('express');
 var router = express.Router();
+const {
+  randomJoke,
+  randomTen,
+  jokeByType,
+} = require("../handler");
 const LimitingMiddleware = require('limiting-middleware');
 
 
