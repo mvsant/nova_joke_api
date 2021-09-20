@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 path = require('path');
-const { randomJoke, randomTen, jokeByType } = require('../handler');
+const { getJoke, randomJoke, randomTen, jokeByType } = require('../handler');
 const LimitingMiddleware = require('limiting-middleware');
 
 
@@ -22,6 +22,10 @@ router.get('/api', (req, res) => {
 
 router.get('/api/random', (req, res) => {
     res.json(randomJoke());
+  });
+
+  router.get('/api/joke/:number', (req, res) => {
+    res.json(getJoke(req.params.number, 1));
   });
 
 router.get('/api/ten', (req, res) => {

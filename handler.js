@@ -1,5 +1,9 @@
 const jokes = require('./jokes/index.json');
 
+const getJoke = number => {
+return jokes[number - 1]
+}
+
 const randomJoke = () => {
   return jokes[Math.floor(Math.random() * jokes.length)];
 }
@@ -29,4 +33,4 @@ const jokeByType = (type, n) => {
   return randomN(jokes.filter(joke => joke.type === type), n);
 };
 
-module.exports = { jokes, randomJoke, randomN, randomTen, jokeByType };
+module.exports = { jokes, getJoke, randomJoke, randomN, randomTen, jokeByType };
