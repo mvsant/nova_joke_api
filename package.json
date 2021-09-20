@@ -1,0 +1,41 @@
+{
+  "name": "nova_joke_api",
+  "version": "1.0.0",
+  "description": "A new REST API to consume the content of official_joke_api, with new content, new categories and HTML pages to show what you can do.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./test.js",
+    "start": "node ./",
+    "dev": "nodemon ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marlonveiga-santos/nova_joke_api.git"
+  },
+  "keywords": [
+    "jokes",
+    "joke-api",
+    "official_joke_api",
+    "nova_joke_api",
+    "express",
+    "nodemon",
+    "api",
+    "rest-api",
+    "javascript",
+    "node",
+    "rest-api"
+  ],
+  "author": "Marlon Veiga",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marlonveiga-santos/nova_joke_api/issues"
+  },
+  "homepage": "https://github.com/marlonveiga-santos/nova_joke_api#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "limiting-middleware": "^1.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
