@@ -1,10 +1,10 @@
 const express = require('express');
-const LimitingMiddleware = require('limiting-middleware');
+//const LimitingMiddleware = require('limiting-middleware');
 const { randomJoke, randomTen, jokeByType } = require('./handler');
 
 const app = express();
 
-app.use(new LimitingMiddleware().limitByIp());
+//app.use(new LimitingMiddleware().limitByIp());
 
 app.use(express.static(__dirname + '/public'));
 

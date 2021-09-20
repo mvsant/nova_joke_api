@@ -3,19 +3,51 @@ var router = express.Router();
 const LimitingMiddleware = require('limiting-middleware');
 
 
-//Middle ware that is specific to this router
 router.use(new LimitingMiddleware().limitByIp());
 
-
-// Define the home page route
-router.get('/', function(req, res) {
-  res.send('home page');
+router.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
 });
 
-// Define the about route
-router.get('/about', function(req, res) {
-  res.send('About us');
+router.get('/', (req, res) => {
+  res.send('Try /random_joke, /random_ten, /jokes/random, or /jokes/ten');
 });
 
+router.get('/ping', (req, res) => {
+  res.send('pong');
+});
+
+router.get('/random_joke', (req, res) => {
+  res.json(randomJoke());
+});
+
+router.get('/random_ten', (req, res) => {
+  res.json(randomTen());
+});
+
+router.get('/jokes/random', (req, res) => {
+  res.json(randomJoke());
+});
+
+router.get('/jokes/ten', (req, res) => {
+  res.json(randomTen());
+});
+
+router.get('/jokes/:type/random', (req, res) => {
+  res.json(jokeByType(req.params.type, 1));
+});
+
+router.get('/jokes/:type/ten', (req, res) => {
+  res.json(jokeByType(req.params.type, 10));
+});
+
+router.use((err, req, res, next) => {
+  const statusCode = err.statusCode || 500;
+
+  res.status(statusCode).json({
+    type: 'error', message: err.message
+  });
+});
 
 module.exports = router;
