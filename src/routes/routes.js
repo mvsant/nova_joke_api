@@ -1,6 +1,5 @@
 const express = require("express");
 const router = express.Router();
-const path = require("path");
 const {
   totalJokes,
   categories,
@@ -19,13 +18,14 @@ router.use((req, res, next) => {
   next();
 });
 
-router.get("/", (req, res) => {
-  // res.sendFile(path.join(__dirname, "../../public/pages/root/index.html"));
+// NEW ROUTES
+
+router.get("/api", (req, res) => {
   res.send(rootView);
 });
 
 router.get("/api", (req, res) => {
-  res.send("Try /random_joke, /random_ten, /jokes/random, or /jokes/ten");
+  res.send(rootView);
 });
 
 router.get("/api/random", (req, res) => {
@@ -55,6 +55,40 @@ router.get("/status", (req, res) => {
       categories().quantity
     } categories: ${categories().names}`,
   });
+});
+
+// LEGACY ROUTES
+
+router.get('/', (req, res) => {
+  res.send('Try /random_joke, /random_ten, /jokes/random, or /jokes/ten');
+});
+
+router.get('/ping', (req, res) => {
+  res.send('pong');
+});
+
+router.get('/random_joke', (req, res) => {
+  res.json(randomJoke());
+});
+
+router.get('/random_ten', (req, res) => {
+  res.json(randomTen());
+});
+
+router.get('/jokes/random', (req, res) => {
+  res.json(randomJoke());
+});
+
+router.get('/jokes/ten', (req, res) => {
+  res.json(randomTen());
+});
+
+router.get('/jokes/:type/random', (req, res) => {
+  res.json(jokeByType(req.params.type, 1));
+});
+
+router.get('/jokes/:type/ten', (req, res) => {
+  res.json(jokeByType(req.params.type, 10));
 });
 
 router.use((err, req, res, next) => {
