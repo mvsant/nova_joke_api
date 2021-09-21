@@ -9,6 +9,7 @@
 </head>
 <body>
     <h1>Welcome to Nova Joke API !!!</h1>
+    <h2>Based on original joke api</h2>
     Our endpoints are:
     <ul>
         <li>/api</li>
@@ -19,16 +20,26 @@
         <li>/api/joke/[joke number]</li>
         <li>/status</li>
     </ul>
-    Our available categories are:
+    Our current available categories are:
     <ul>
-        <li></li>
+        <li>general</li>
+        <li>knock-knock</li>
+        <li>programming</li>
     </ul>
     <p>You have this page as root and one JSON version at endpoint: /api (SOON).</p>
-    <p>You can programmatically check all jokes and categories at /status </p>
+    <p>You can programmatically check all jokes and categories at /status endpoint.</p>
     <p>You can override to legacy routes (original Joke Api) uncommenting the route in index.js</p>
     <p><b>NOTE:</b> Legacy routes have your own endpoints listed below ↓:  </p>
     <ul>
-        <li></li>
+        <li>/ - root</li>
+        <li>/ping - returns the word pong</li>
+        <li>/random_joke - returns one random joke</li>
+        <li>/random_ten - returns an array of 10 random jokes</li>
+        <li>/jokes/random - returns one random joke</li>
+        <li>/jokes/ten - returns an array of 10 random jokes</li>
+        <li>/jokes/[type]/random - returns one random joke of that type</li>
+        <li>/jokes/[type]/ten - returns ten random jokes of that type </li>
+
     </ul>
 
 </body>
