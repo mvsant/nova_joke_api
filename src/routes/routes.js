@@ -1,6 +1,6 @@
-var express = require("express");
-var router = express.Router();
-path = require("path");
+const express = require("express");
+const router = express.Router();
+const path = require("path");
 const {
   totalJokes,
   categories,

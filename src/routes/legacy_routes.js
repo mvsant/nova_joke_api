@@ -1,5 +1,5 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 const {
   randomJoke,
   randomTen,
@@ -51,7 +51,8 @@ router.use((err, req, res, next) => {
   const statusCode = err.statusCode || 500;
 
   res.status(statusCode).json({
-    type: 'error', message: err.message
+    type: "error",
+    message: err.message,
   });
 });
 
