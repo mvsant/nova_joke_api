@@ -1,3 +1,4 @@
+const style = `
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Quicksand:wght@400;600&display=swap');
 
 * {
@@ -43,4 +44,6 @@ li::before {
   a:visited{
       color: slateblue;
   }
+  `
 
+  module.exports = style

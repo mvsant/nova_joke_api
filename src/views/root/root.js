@@ -1,10 +1,15 @@
+const style = require("./style");
+
+const message = `
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="/pages/root/style.css">
+    <style>
+   ${style}
+   </style>
     <title>Joke API</title>
 </head>
 <body>
@@ -58,3 +63,6 @@
 </main>
 </body>
 </html>
+`;
+
+module.exports = message;

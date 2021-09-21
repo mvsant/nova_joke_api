@@ -10,6 +10,7 @@ const {
   jokeByType,
 } = require("../handler");
 const LimitingMiddleware = require("limiting-middleware");
+const rootView = require("../views/root/root.js");
 
 router.use(new LimitingMiddleware().limitByIp());
 
@@ -19,7 +20,8 @@ router.use((req, res, next) => {
 });
 
 router.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../public/pages/root/index.html"));
+  // res.sendFile(path.join(__dirname, "../../public/pages/root/index.html"));
+  res.send(rootView);
 });
 
 router.get("/api", (req, res) => {

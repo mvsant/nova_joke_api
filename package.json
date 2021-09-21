@@ -2,7 +2,7 @@
   "name": "nova_joke_api",
   "version": "1.0.0",
   "description": "A new REST API to consume the content of official_joke_api, with new content, new categories and HTML pages to show what you can do.",
-  "main": "src/api.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "node ./test.js",
     "start": "./node_modules/.bin/netlify-lambda serve src",
