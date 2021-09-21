@@ -17,7 +17,7 @@ const message = `
     <h2>Based on original joke api</h2>
     <main>
         <section>
-            <p>Our endpoints are:</p>
+            <p>Our new endpoints are:</p>
             <ul>
                 <li>/api</li>
                 <li>/api/random</li>
@@ -28,20 +28,7 @@ const message = `
                 <li>/status</li>
             </ul>
         </section>
-    <section>     
-       <p>Our current available categories are:</p>
-        <ul>
-            <li>general</li>
-            <li>knock-knock</li>
-            <li>programming</li>
-        </ul>
-    </section>
-    <section>
-        <p>You have this page as root and one JSON version at endpoint: /api (SOON).</p>
-        <p>You can programmatically check all jokes and categories at /status endpoint.</p>
-        <p>You can override to legacy routes (original Joke Api) uncommenting the route in index.js</p>
-    </section>
-    <section>
+        <section>
         <p><b>NOTE:</b> Legacy routes have your own endpoints listed below ↓:  </p>
         <ul>
             <li>/ - root</li>
@@ -55,10 +42,25 @@ const message = `
     
         </ul>
     </section>
+    <section>     
+       <p>Our current available categories are:</p>
+        <ul>
+            <li>general</li>
+            <li>knock-knock</li>
+            <li>programming</li>
+        </ul>
+    </section>
+    <section>
+        <p>You have this page as root at endpoint: /api .</p>
+        <p>You can programmatically check all jokes and categories at /status endpoint.</p>
+        <p>You can access legacy routes (original Joke Api) normally. That means you can use the same structure built previously on your application. </p>
+    </section>
+
     <section>
         <p><b><i>Disclaimer:</i></b> This project is directly "inspired" on "Original Joke API" but claims easier usability.</p>
         <p>Feel free to contact-me if you have any issue or message related with this project.</p>
         <p>Original joke api repo: <a href="https://github.com/15Dkatz/official_joke_api">https://github.com/15Dkatz/official_joke_api</a></p>
+        <p>Nova joke api repo: <a href="https://github.com/marlonveiga-santos/nova_joke_api">https://github.com/marlonveiga-santos/nova_joke_api</a></p>
     </section>
 </main>
 </body>
