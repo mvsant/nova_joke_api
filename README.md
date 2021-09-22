@@ -8,6 +8,8 @@ Start Here: [https://sharp-mestorf-1d7507.netlify.app/.netlify/functions/index/a
 
 Or access the homepage at [https://sharp-mestorf-1d7507.netlify.app/.netlify/functions/index/api/](https://sharp-mestorf-1d7507.netlify.app/.netlify/functions/index/api/) to learn more about how to use the content.
 
+Base url: [https://sharp-mestorf-1d7507.netlify.app/.netlify/functions/index/](https://sharp-mestorf-1d7507.netlify.app/.netlify/functions/index/api/)
+
 # We have legacy !
 
 You can access the standard endpoints of Original Joke api. They are: 
