@@ -4,11 +4,11 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b2846451-233a-4fc4-90a4-adf7d760d1f3/deploy-status)](https://app.netlify.com/sites/sharp-mestorf-1d7507/deploys)
 
-Start Here: [https://sharp-mestorf-1d7507.netlify.app/.netlify/functions/index/api/random](https://sharp-mestorf-1d7507.netlify.app/.netlify/functions/index/api/random)
+Start Here: [https://nova-joke-api.netlify.app/.netlify/functions/index/api/random](https://nova-joke-api.netlify.app/.netlify/functions/index/api/random)
 
-Or access the homepage at [https://sharp-mestorf-1d7507.netlify.app/.netlify/functions/index/api/](https://sharp-mestorf-1d7507.netlify.app/.netlify/functions/index/api/) to learn more about how to use the content.
+Or access the homepage at [https://nova-joke-api.netlify.app/.netlify/functions/index/api/](https://nova-joke-api.netlify.app/.netlify/functions/index/api/) to learn more about how to use the content.
 
-Base url: [https://sharp-mestorf-1d7507.netlify.app/.netlify/functions/index/](https://sharp-mestorf-1d7507.netlify.app/.netlify/functions/index/api/)
+Base url: ``` https://nova-joke-api.netlify.app/.netlify/functions/index/ ```
 
 # We have legacy !
 
